@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Mini Paint App</title>
+
+  <!-- External stylesheet -->
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <!-- ----------  TOOLBAR  ---------- -->
+  <header class="toolbar">
+    <!-- Color picker lets users choose any stroke color -->
+    <label>
+      <span class="visually-hidden">Pick color</span>
+      <input type="color" id="colorPicker" value="#000000" />
+    </label>
+
+    <!-- Clear canvas button -->
+    <button id="clearBtn" type="button">Clear Canvas</button>
+  </header>
+
+  <!-- ----------  DRAWING AREA  ---------- -->
+  <!-- The canvas resizes to fill the remaining viewport height -->
+  <canvas id="drawingCanvas"></canvas>
+
+  <!-- Main script -->
+  <script src="script.js"></script>
+</body>
+</html>

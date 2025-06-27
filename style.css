@@ -1,0 +1,60 @@
+/* ====== GLOBAL RESETS ====== */
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+html,
+body {
+  height: 100%;
+  font-family: system-ui, sans-serif;
+  background: #af7676;
+}
+
+/* ====== TOOLBAR ====== */
+.toolbar {
+  display: flex;
+  gap: 1rem;
+  align-items: center;
+  padding: 0.75rem 1rem;
+  background: #ffffff;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.08);
+}
+
+button {
+  padding: 0.5rem 1rem;
+  border: none;
+  border-radius: 4px;
+  font-size: 0.9rem;
+  cursor: pointer;
+  background: #ff5757;
+  color: #ffffff;
+  transition: background 0.2s ease;
+}
+button:hover {
+  background: #d94a4a;
+}
+
+input[type='color'] {
+  /* Remove default border in some browsers */
+  border: none;
+  width: 2.5rem;
+  height: 2.5rem;
+  padding: 0;
+  cursor: pointer;
+}
+
+.visually-hidden {
+  position: absolute;
+  left: -9999px;
+}
+
+/* ====== CANVAS ====== */
+#drawingCanvas {
+  display: block;           /* Removes gap below canvas */
+  width: 100%;              /* Stretches horizontally */
+  height: calc(100% - 66px);/* Fills rest of the viewport (toolbar ≈ 66 px) */
+  touch-action: none;       /* Prevents touch scrolling while drawing */
+  background: #ffffff;
+  cursor: crosshair;
+}
